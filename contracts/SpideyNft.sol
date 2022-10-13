@@ -4,21 +4,21 @@ pragma solidity ^0.8.8;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract BasicNft is ERC721 {
-    string public constant TOKEN_URI =
-        "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+contract SpideyNft is ERC721 {
     uint256 private s_tokenCounter;
 
-    constructor() ERC721("Dogie", "DOG") {
+    string public constant TOKEN_URI = "ipfs://QmPMYNYxTDoiztaFbEGAxPRd697xFzaaioXWr2ruTEP4kr";
+
+    constructor() ERC721("Spidey", "SPD") {
         s_tokenCounter = 0;
     }
 
-    //To make new dogs, openzeppelin comes with a mint function
-    //Also anybody who mints one, will have this same puppy above
+    //To make new spidermen, openzeppelin comes with a mint function
+    //Also anybody who mints one, will have this same spiderman
     function mintNft() public returns (uint256) {
         //This means anytime we mint a new NFT
         _safeMint(msg.sender, s_tokenCounter);
-        //We up that token counter
+        //We update that token counter
         s_tokenCounter = s_tokenCounter + 1;
         //Then we return the new token counter
         return s_tokenCounter;
