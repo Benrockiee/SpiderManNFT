@@ -72,4 +72,4 @@ async function handleTokenUris() {
     return TOKEN_URI
 }
 
-module.exports.tags = ["all", "SpideyNft", "main"]
+module.exports.tags = ["all", "spideynft"]

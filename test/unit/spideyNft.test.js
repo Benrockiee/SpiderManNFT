@@ -13,7 +13,7 @@ const { developmentChains } = require("../../helper-hardhat-config")
               accounts = await ethers.getSigners()
               deployer = accounts[0]
               await deployments.fixture(["spideynft"])
-              spideyNft = await ethers.getContractFactory("SpideyNft")
+              spideyNft = await ethers.getContract("SpideyNft", deployer)
           })
 
           describe("Constructor", () => {
